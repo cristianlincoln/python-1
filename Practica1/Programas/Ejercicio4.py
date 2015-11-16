@@ -1,0 +1,30 @@
+from turtle import *
+pantalla = Screen()
+pantalla.setup(425,225)
+pantalla.screensize(400,200)
+
+tortuga = Turtle()
+
+coord_x = int(input("Dame la coordenada x: "))
+coord_y = int(input("Dame la coordenada y: "))
+radio = int(input("Dame el radio: "))
+
+tortuga.penup()
+tortuga.goto(coord_x, coord_y)
+tortuga.pendown()
+tortuga.forward(radio)
+tortuga.write("radio = {0}" .format(radio))
+tortuga.penup()
+tortuga.backward(radio)
+tortuga.left(270)
+tortuga.forward(radio)
+tortuga.left(90)
+tortuga.pendown()
+tortuga.circle(radio)
+tortuga.penup()
+tortuga.goto(coord_x, coord_y)
+tortuga.write("({0},{1})" .format(coord_x, coord_y))
+tortuga.dot(5)
+tortuga.hideturtle()
+
+pantalla.exitonclick()
